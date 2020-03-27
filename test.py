@@ -1,6 +1,4 @@
 print("Hello world")
-print("test1")
-print('Dong Hee Lee Test')
-print('please let me push')
-#HaHa I am the Best
-print("YG")
+print("가만히있어")
+print('내가 다 바꿀거야')
+print('다인짱')
