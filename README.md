@@ -34,3 +34,15 @@ KSIF_QVI_2020 Python Source
 ###### With Transformer, we use the encoder on its own, but in the case of decoder, we change it into CAAN(Cross-asset Attention Network) network.
 
 <img src= "https://user-images.githubusercontent.com/44806420/128356572-ef077a84-3431-4cf3-bc0e-822f811d7b4a.png" width="700" height="300">
+
+###### Yeah, in other words, Alpha Portfolio is made of the two networks, Transformer encoder & CAAN. Through it, you can process the data and get the stocks and ratio of your portfolio. Now, I want to talk about How the networks, TE(Transformer Network) and CAAN(Cross-Asset Attention network) is used in this model.
+
+
+#### Transformer Encoder(TE) and CAAN(Cross-Asset Attention Network)
+###### TE network is used to take the correlation among times into account. The multi-head attention network is used in the range of period. So, with TE, we could consider the correlation between past and future. For detail, I have to talk about the data shape. The input of this data is 3-d data. Each demension is made with (Period, stocks, fundamentals). With this structure, if you put it into TE, the model apply the time-changing of the data.
+###### CAAN is pretty similar with TE. But, you should reshape the data to take the correlation among stocks into account. The data shape is (Stocks, period, fundamentals). With it, the model apply the correlation among stocks of the data. We did it with the python, pytorch library because we could easily find the source code of Transformer on the internet. We refered the source code and just changed it into what we want to use. The final part of CAAN, before putting it into feed forward network, you have to reshape the data into 2-d shape to put it into the deep neural network. So, at that time, you use the data shape (stocks, period * features).
+###### After the neural network, you can get shape (stocks, 1), meaning the "winner score". With it, you can get the stock's ratio in your portfolio. Then, How this model can be trained?
+###### It's simple. With the winner score, you can make a portfolio and you can caluculate your portfolio return. After some repetition, you can get the series of portfolio return, so you can calculate the sharpe ratio of the portfolio in the series.
+###### Here, the sharpe ratio is the "reward" in reinforcement learning. Yeah, it can be hard to understand. Now, I want to talk about the reinforcement learning application into this algorithm
+
+#### Reinforcement Learning
