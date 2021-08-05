@@ -33,4 +33,4 @@ KSIF_QVI_2020 Python Source
 ###### With encoder, it vectories the data, and with decoder, it makes the output(in machine translation, it can be other language).
 ###### With Transformer, we use the encoder on its own, but in the case of decoder, we change it into CAAN(Cross-asset Attention Network) network.
 
-<img src= "https://user-images.githubusercontent.com/44806420/128356572-ef077a84-3431-4cf3-bc0e-822f811d7b4a.png" width="500" height="300">
+<img src= "https://user-images.githubusercontent.com/44806420/128356572-ef077a84-3431-4cf3-bc0e-822f811d7b4a.png" width="700" height="300">
