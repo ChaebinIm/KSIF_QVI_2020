@@ -46,3 +46,16 @@ KSIF_QVI_2020 Python Source
 ###### Here, the sharpe ratio is the "reward" in reinforcement learning. Yeah, it can be hard to understand. Now, I want to talk about the reinforcement learning application into this algorithm
 
 #### Reinforcement Learning
+###### In this model, the reinforcement learning algorithm, policy gradient, is used. simply introducing, it is just updating the policy to get the optimal return(cumulative sum of rewards). Here is the list of application of policy gradient algorithm in this model.
+- Environment : Historical data
+- State : market data during randomly selected period
+- Policy : TE & CAAN network
+- Reward : Shapre ratio of the portfolio in the period(state)
+
+###### The Reinforcement learning algorithm training process is really simple.
+1. By environment, get a state.
+2. With the state, the policy is processed. In the process, TE & CAAN network is used. In my model, the period length is 12month(monthly data). So, the process must be used 12 times.
+3. After 12 times(months), you can get the reward(sharpe ratio of the model's portfolio).
+4. The model is trained to maximize the reward(sharpe ratio).
+
+###### With the process above, you can construct the model infrastructure. It's the end. Really simple.
