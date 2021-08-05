@@ -25,9 +25,12 @@ KSIF_QVI_2020 Python Source
 
 ###### Now, I want to talk about the detail algorithm of Alpha portfolio.
 #### Structure of Transformer network.
+
 <img src="https://user-images.githubusercontent.com/44806420/128182382-c51faadf-64a0-40e4-b9c0-687f147c0f02.jpg"  width="380" height="500">
+
 ###### Transformer network don't use RNN networks, but use just attention network.
 ###### Transformer is made of two parts, called encoder and decoder(like Seq2Seq models)
 ###### With encoder, it vectories the data, and with decoder, it makes the output(in machine translation, it can be other language).
 ###### With Transformer, we use the encoder on its own, but in the case of decoder, we change it into CAAN(Cross-asset Attention Network) network.
+
 <img src= "https://user-images.githubusercontent.com/44806420/128356572-ef077a84-3431-4cf3-bc0e-822f811d7b4a.png" width="500" height="300">
